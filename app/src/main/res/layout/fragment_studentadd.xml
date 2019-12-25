@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:text="Student Details"
+        android:textSize="40sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/etFullName"
+        android:layout_margin="15dp"
+        android:textSize="30sp"
+        android:hint="Enter Full Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/etAge"
+        android:layout_margin="15dp"
+        android:textSize="30sp"
+        android:hint="Enter Age"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:textSize="30sp"
+        android:text="--- Select Gender ---"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <RadioGroup
+        android:id="@+id/radioSex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/radioMale"
+            android:text="Male"
+            android:textSize="30sp"
+            android:hint="Male"
+            android:layout_margin="15dp"
+            android:checked="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <RadioButton
+            android:id="@+id/radioFemale"
+            android:text="Female"
+            android:textSize="30sp"
+            android:hint="Female"
+            android:layout_margin="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <RadioButton
+            android:id="@+id/radioOther"
+            android:text="Other"
+            android:textSize="30sp"
+            android:hint="Other"
+            android:layout_margin="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+    </RadioGroup>
+    <EditText
+        android:id="@+id/etAddress"
+        android:layout_margin="15dp"
+        android:textSize="30sp"
+        android:hint="Enter Address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnSave"
+        android:textSize="30sp"
+        android:text="Save"
+        android:layout_margin="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
