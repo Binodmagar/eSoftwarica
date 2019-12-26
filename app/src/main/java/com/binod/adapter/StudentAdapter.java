@@ -1,6 +1,8 @@
 package com.binod.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +13,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.binod.esoftwarica.EditStudent;
 import com.binod.esoftwarica.R;
 
 import java.util.List;
@@ -24,6 +27,7 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.StudentV
         this.studentList = studentList;
     }
 
+
     @NonNull
     @Override
     public StudentViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -32,6 +36,8 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.StudentV
         return new StudentViewHolder(view);
     }
 
+
+    @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull StudentViewHolder holder, final int position) {
 
@@ -59,6 +65,18 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.StudentV
                 studentList.remove(position);
                 notifyItemRemoved(position);
                 Toast.makeText(context, studentdel + " is removed", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        holder.imgEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Student studentEdit = studentList.get(position);
+                int index = studentList.indexOf(studentEdit);
+                EditStudent.index = index;
+                Intent intent = new Intent(context, EditStudent.class);
+                context.startActivity(intent);
+
             }
         });
     }

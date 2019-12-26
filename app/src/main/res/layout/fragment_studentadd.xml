@@ -21,6 +21,7 @@
         android:id="@+id/etAge"
         android:layout_margin="15dp"
         android:textSize="20sp"
+        android:inputType="number"
         android:hint="Enter Age"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
